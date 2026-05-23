@@ -14,6 +14,8 @@ The repository is organized around two layers:
 | [ProcessDecompositionFramework.md](ProcessDecompositionFramework.md) | Core framework for process decomposition, reference architecture, governance, evaluation, and implementation guidance |
 | [LineOfBusinessSamples/README.md](LineOfBusinessSamples/README.md) | Index of the sample library and cross-sample comparison matrix |
 | [LineOfBusinessSamples](LineOfBusinessSamples) | Function-specific examples showing how to apply the framework to bounded pilot workflows |
+| [LICENSE](LICENSE) | Repository license under Apache License 2.0 |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Contribution expectations for framework and sample-library changes |
 
 ## What This Is For
 
@@ -31,6 +33,11 @@ Use this repository when you need to:
 2. Move to [LineOfBusinessSamples/README.md](LineOfBusinessSamples/README.md) to browse the available function-specific examples.
 3. Open the sample closest to your domain and use its pilot workflow as a pattern.
 4. Adapt the decomposition, automation boundary, governance, and evaluation sections to your own process.
+
+## Repository Governance
+
+- License: [Apache License 2.0](LICENSE)
+- Contribution guidance: [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## Current Sample Coverage
 
