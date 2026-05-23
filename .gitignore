@@ -1,0 +1,13 @@
+# OS artifacts
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor settings and local IDE state
+.vscode/
+.idea/
+
+# Temporary and backup files
+*.tmp
+*.swp
+*~
