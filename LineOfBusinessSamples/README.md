@@ -2,38 +2,83 @@
 
 This folder contains concrete examples of how to apply the Process Decomposition Framework to common enterprise functions. Each sample is centered on one bounded pilot workflow rather than a broad departmental description, so the documents stay useful for actual design and implementation work.
 
+This library now has three practical layers for each function:
+
+1. a narrative sample describing the workflow and decomposition
+2. a Copilot Cowork plugin plan showing how the workflow maps to skills and tools
+3. a Copilot Cowork skill folder containing concrete `SKILL.md` artifacts
+
 For the core framework, see [../ProcessDecompositionFramework.md](../ProcessDecompositionFramework.md).
+
+Current scope in this folder:
+
+- 19 line-of-business sample documents
+- 19 Copilot Cowork plugin planning documents
+- 19 Copilot Cowork skill domains
 
 ## How To Use This Library
 
 1. Start with the function closest to your current work.
-2. Use the pilot workflow as a pattern, not a fixed template.
-3. Reuse the same sequence in your own domain: process definition, decomposition, signals, automation boundary, skills and tools, governance, evaluation, rollout.
-4. Treat the automation boundary and governance sections as mandatory design inputs, not optional add-ons.
+2. Read the sample markdown first to understand the bounded pilot workflow and decomposition logic.
+3. If you are implementing in Copilot Cowork, open the matching plugin plan under [CopilotCoworkSamplePluginPlans](CopilotCoworkSamplePluginPlans/) next.
+4. Then inspect the corresponding folder under [CopilotCoworkSampleSkills](CopilotCoworkSampleSkills/) for concrete `SKILL.md` assets and domain-specific summaries.
+5. Use the pilot workflow as a pattern, not a fixed template.
+6. Reuse the same sequence in your own domain: process definition, decomposition, signals, automation boundary, skills and tools, governance, evaluation, rollout.
+7. Treat the automation boundary and governance sections as mandatory design inputs, not optional add-ons.
+
+## Folder Structure
+
+```text
+LineOfBusinessSamples/
+|-- README.md
+|-- *.md
+|-- CopilotCoworkSamplePluginPlans/
+|   `-- *-Cowork-Plugin-Plan.md
+`-- CopilotCoworkSampleSkills/
+	`-- <Function>/
+		|-- <domain summary>.md
+		`-- <skill-name>/SKILL.md
+```
+
+The sample markdown files explain the workflow design. The plugin plans explain how that workflow translates into Cowork concepts. The skill folders contain the most implementation-ready artifacts.
 
 ## Sample Index
 
-| Function | Sample File | Pilot Workflow |
-| --- | --- | --- |
-| Finance | [Finance.md](Finance.md) | AP invoice exception handling |
-| Finance Controllership | [FinanceControllership.md](FinanceControllership.md) | Manual journal entry request and approval |
-| Business Analysis | [BusinessAnalysis.md](BusinessAnalysis.md) | Requirements intake and synthesis |
-| HR | [HR.md](HR.md) | Employee onboarding readiness |
-| Customer Service | [CustomerService.md](CustomerService.md) | Case intake and resolution triage |
-| Product Support | [ProductSupport.md](ProductSupport.md) | Escalated case triage and engineering handoff |
-| Procurement | [Procurement.md](Procurement.md) | Supplier onboarding and risk review |
-| Sales | [Sales.md](Sales.md) | Proposal and RFP response assembly |
-| Product Management | [ProductManagement.md](ProductManagement.md) | Feature request intake and opportunity framing |
-| Marketing | [Marketing.md](Marketing.md) | Campaign request intake and brief synthesis |
-| Corporate Communications | [CorporateCommunications.md](CorporateCommunications.md) | Announcement request intake and message brief synthesis |
-| Legal | [Legal.md](Legal.md) | Contract intake and clause deviation triage |
-| Compliance and Risk | [ComplianceRisk.md](ComplianceRisk.md) | Policy exception and compliance case triage |
-| Internal Audit | [InternalAudit.md](InternalAudit.md) | Audit request intake and evidence collection prep |
-| IT Service Management | [ITServiceManagement.md](ITServiceManagement.md) | Incident intake and triage |
-| IT Security | [ITSecurity.md](ITSecurity.md) | Security alert triage and investigation prep |
-| Operations | [Operations.md](Operations.md) | Operational exception intake and resolution routing |
-| Supply Chain | [SupplyChain.md](SupplyChain.md) | Inventory shortage and disruption triage |
-| Field Service | [FieldService.md](FieldService.md) | Work-order triage and dispatch readiness |
+| Function | Sample File | Pilot Workflow | Plugin Plan | Skill Assets |
+| --- | --- | --- | --- | --- |
+| Finance | [Finance.md](Finance.md) | AP invoice exception handling | [Finance-Cowork-Plugin-Plan.md](CopilotCoworkSamplePluginPlans/Finance-Cowork-Plugin-Plan.md) | [Finance/](CopilotCoworkSampleSkills/Finance/) |
+| Finance Controllership | [FinanceControllership.md](FinanceControllership.md) | Manual journal entry request and approval | [Finance-Controllership-Cowork-Plugin-Plan.md](CopilotCoworkSamplePluginPlans/Finance-Controllership-Cowork-Plugin-Plan.md) | [FinanceControllership/](CopilotCoworkSampleSkills/FinanceControllership/) |
+| Business Analysis | [BusinessAnalysis.md](BusinessAnalysis.md) | Requirements intake and synthesis | [Business-Analysis-Cowork-Plugin-Plan.md](CopilotCoworkSamplePluginPlans/Business-Analysis-Cowork-Plugin-Plan.md) | [BusinessAnalysis/](CopilotCoworkSampleSkills/BusinessAnalysis/) |
+| HR | [HR.md](HR.md) | Employee onboarding readiness | [HR-Cowork-Plugin-Plan.md](CopilotCoworkSamplePluginPlans/HR-Cowork-Plugin-Plan.md) | [HR/](CopilotCoworkSampleSkills/HR/) |
+| Customer Service | [CustomerService.md](CustomerService.md) | Case intake and resolution triage | [Customer-Service-Cowork-Plugin-Plan.md](CopilotCoworkSamplePluginPlans/Customer-Service-Cowork-Plugin-Plan.md) | [CustomerService/](CopilotCoworkSampleSkills/CustomerService/) |
+| Product Support | [ProductSupport.md](ProductSupport.md) | Escalated case triage and engineering handoff | [Product-Support-Cowork-Plugin-Plan.md](CopilotCoworkSamplePluginPlans/Product-Support-Cowork-Plugin-Plan.md) | [ProductSupport/](CopilotCoworkSampleSkills/ProductSupport/) |
+| Procurement | [Procurement.md](Procurement.md) | Supplier onboarding and risk review | [Procurement-Cowork-Plugin-Plan.md](CopilotCoworkSamplePluginPlans/Procurement-Cowork-Plugin-Plan.md) | [Procurement/](CopilotCoworkSampleSkills/Procurement/) |
+| Sales | [Sales.md](Sales.md) | Proposal and RFP response assembly | [Sales-Cowork-Plugin-Plan.md](CopilotCoworkSamplePluginPlans/Sales-Cowork-Plugin-Plan.md) | [Sales/](CopilotCoworkSampleSkills/Sales/) |
+| Product Management | [ProductManagement.md](ProductManagement.md) | Feature request intake and opportunity framing | [Product-Management-Cowork-Plugin-Plan.md](CopilotCoworkSamplePluginPlans/Product-Management-Cowork-Plugin-Plan.md) | [ProductManagement/](CopilotCoworkSampleSkills/ProductManagement/) |
+| Marketing | [Marketing.md](Marketing.md) | Campaign request intake and brief synthesis | [Marketing-Cowork-Plugin-Plan.md](CopilotCoworkSamplePluginPlans/Marketing-Cowork-Plugin-Plan.md) | [Marketing/](CopilotCoworkSampleSkills/Marketing/) |
+| Corporate Communications | [CorporateCommunications.md](CorporateCommunications.md) | Announcement request intake and message brief synthesis | [Corporate-Communications-Cowork-Plugin-Plan.md](CopilotCoworkSamplePluginPlans/Corporate-Communications-Cowork-Plugin-Plan.md) | [CorporateCommunications/](CopilotCoworkSampleSkills/CorporateCommunications/) |
+| Legal | [Legal.md](Legal.md) | Contract intake and clause deviation triage | [Legal-Cowork-Plugin-Plan.md](CopilotCoworkSamplePluginPlans/Legal-Cowork-Plugin-Plan.md) | [Legal/](CopilotCoworkSampleSkills/Legal/) |
+| Compliance and Risk | [ComplianceRisk.md](ComplianceRisk.md) | Policy exception and compliance case triage | [Compliance-Risk-Cowork-Plugin-Plan.md](CopilotCoworkSamplePluginPlans/Compliance-Risk-Cowork-Plugin-Plan.md) | [ComplianceRisk/](CopilotCoworkSampleSkills/ComplianceRisk/) |
+| Internal Audit | [InternalAudit.md](InternalAudit.md) | Audit request intake and evidence collection prep | [Internal-Audit-Cowork-Plugin-Plan.md](CopilotCoworkSamplePluginPlans/Internal-Audit-Cowork-Plugin-Plan.md) | [InternalAudit/](CopilotCoworkSampleSkills/InternalAudit/) |
+| IT Service Management | [ITServiceManagement.md](ITServiceManagement.md) | Incident intake and triage | [IT-Service-Management-Cowork-Plugin-Plan.md](CopilotCoworkSamplePluginPlans/IT-Service-Management-Cowork-Plugin-Plan.md) | [ITServiceManagement/](CopilotCoworkSampleSkills/ITServiceManagement/) |
+| IT Security | [ITSecurity.md](ITSecurity.md) | Security alert triage and investigation prep | [IT-Security-Cowork-Plugin-Plan.md](CopilotCoworkSamplePluginPlans/IT-Security-Cowork-Plugin-Plan.md) | [ITSecurity/](CopilotCoworkSampleSkills/ITSecurity/) |
+| Operations | [Operations.md](Operations.md) | Operational exception intake and resolution routing | [Operations-Cowork-Plugin-Plan.md](CopilotCoworkSamplePluginPlans/Operations-Cowork-Plugin-Plan.md) | [Operations/](CopilotCoworkSampleSkills/Operations/) |
+| Supply Chain | [SupplyChain.md](SupplyChain.md) | Inventory shortage and disruption triage | [Supply-Chain-Cowork-Plugin-Plan.md](CopilotCoworkSamplePluginPlans/Supply-Chain-Cowork-Plugin-Plan.md) | [SupplyChain/](CopilotCoworkSampleSkills/SupplyChain/) |
+| Field Service | [FieldService.md](FieldService.md) | Work-order triage and dispatch readiness | [Field-Service-Cowork-Plugin-Plan.md](CopilotCoworkSamplePluginPlans/Field-Service-Cowork-Plugin-Plan.md) | [FieldService/](CopilotCoworkSampleSkills/FieldService/) |
+
+## Copilot Cowork Assets
+
+The Cowork assets under this folder are useful for two different audiences:
+
+- `CopilotCoworkSamplePluginPlans` is best for architects and process designers who want to see how the framework translates into skill suites, operating modes, tool choices, and governance.
+- `CopilotCoworkSampleSkills` is best for implementers who want concrete `SKILL.md` artifacts, domain summaries, and folder structures they can adapt.
+
+Typical reading order for one function:
+
+1. open the sample markdown to understand the workflow and decomposition
+2. open the matching plugin plan to see the proposed Cowork design
+3. open the matching skill folder to inspect concrete skill artifacts
+4. adapt the same pattern to your own process, data sources, and governance rules
 
 ## Cross-Sample Comparison
 

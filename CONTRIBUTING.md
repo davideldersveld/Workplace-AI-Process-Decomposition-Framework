@@ -48,7 +48,7 @@ When adding a new line-of-business sample, include at minimum:
 - Do not add copyrighted third-party content that should not be redistributed.
 - Do not add sensitive, proprietary, or customer-specific data.
 - Keep examples generic enough to reuse, but specific enough to be actionable.
-- If you add a new sample document, update [README.md](README.md) and [LineOfBusinessSamples/README.md](LineOfBusinessSamples/README.md) as needed.
+- If you add a new sample document, update [README.md](README.md) and the relevant library index such as [LineOfBusinessSamples/README.md](LineOfBusinessSamples/README.md) or [VerticalSamples/README.md](VerticalSamples/README.md).
 
 ## Commit Guidance
 
